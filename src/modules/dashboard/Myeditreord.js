@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { backendurl } from '../../Servicepage';
 
@@ -13,7 +13,7 @@ function Myeditreord() {
         dob: "",
         gender: "",
         profile: "",
-        course: "",
+        state: "",
         pass: ""
     });
 
@@ -35,21 +35,21 @@ function Myeditreord() {
     }
     useEffect(() => {
         singleuser();
-    }, []);
+    }, );
 
 
     const updaterecord = async () => {
-            const { fullname, email, phone, dob, gender, profile, course, pass } = insdata;
+            const { fullname, email, phone, dob, gender, profile, state, pass } = insdata;
             const mydata = await fetch(`${backendurl}/updaterecord/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    fullname, email, phone, dob, gender, profile, course, pass
+                    fullname, email, phone, dob, gender, profile, state, pass
                 })
             })
             const res = await mydata.json();
             console.log(res);
-            usenav("/dashboard");
+            usenav("/dashboard/Users");
 
            
 
@@ -96,12 +96,12 @@ function Myeditreord() {
                             </div>
                         </div>
                         <div className='col-md-6 p-2 mt-2'>
-                            <label className="form-label">Course</label>
-                            <select className='form-select' name='course' onChange={updateinput} value={insdata.course}>
-                                <option>Mern</option>
-                                <option>Mean</option>
-                                <option>java</option>
-                                <option>UI/UX</option>
+                            <label className="form-label">State</label>
+                            <select className='form-select' name='state' onChange={updateinput} value={insdata.course}>
+                                <option>UP</option>
+                                <option>Bihar</option>
+                                <option>Punjab</option>
+                                <option>dehli/UX</option>
                             </select>
                         </div>
                         <div className='col-md-6 p-2 mt-2'>
@@ -116,7 +116,7 @@ function Myeditreord() {
                         <div className='col-12 p-2 mt-2 text-center'>
                             <input type='button' value="Update record" className='btn btn-success' onClick={updaterecord}/>
                             <input type='reset' value="cancel" className='btn btn-danger ms-3' />
-                            <Link to="/">login page</Link>
+                            
                         </div>
                     </div>
                 </div>

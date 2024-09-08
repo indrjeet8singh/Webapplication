@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { backendurl } from '../../Servicepage';
+import { FaRegUser } from 'react-icons/fa';
+import {toast} from 'react-toastify'
+
 
 
 function Myregistorpage() {
@@ -44,21 +47,21 @@ function Myregistorpage() {
             const res = await mydata.json();
             console.log(res);
             if (res.status === 255) {
-                alert("data submit successfully");
+                toast.success("data submitz successfully");
                 appNavigate("/");
             }
             else if(res.status===450)
             {
-                alert("your full name not property fil");
+                toast.warning("fields filled are mandatory");
             }
             else
             {
-               alert("not fill"); 
+               toast.warning("all fields filled are mandatory"); 
             }
 
         }
         else {
-            alert("form fill property");
+            toast.error("form fill property");
         }
 
 
@@ -68,14 +71,26 @@ function Myregistorpage() {
 
 
     return (
+        <Fragment>
+            
         <form>
             <div className='container'>
                 <div className='row justify-content-md-center'>
                     <div className='col-sm-8 p-3'>
-                        <div className='container-fluid border p-5 bg-light shadow'>
+                        <div className='container-fluid border p-5 bg-light shadow rounded-5 animate__animated animate__bounceIn'>
                             <div className='row'>
+                            <span
+                  style={{ 
+                    textAlign: "center",
+                    fontSize: "45px",
+                    
+                    color:'skyblue'
+                  }}
+                >
+                  <FaRegUser />
+                </span>
                                 <div className='col-12 text-center'>
-                                    <h2>New User Registor Page</h2>
+                                    <h2 style={{color:"skyblue"}}>User Register</h2>
                                 </div>
                                 <div className='col-md-6 p-2 mt-2'>
                                     <label className="form-label">Full Name</label>
@@ -106,12 +121,12 @@ function Myregistorpage() {
                                     </div>
                                 </div>
                                 <div className='col-md-6 p-2 mt-2'>
-                                    <label className="form-label">Course</label>
-                                    <select className='form-select' name='course' onChange={updateinput}>
-                                        <option>Mern</option>
-                                        <option>Mean</option>
-                                        <option>java</option>
-                                        <option>UI/UX</option>
+                                    <label className="form-label">state</label>
+                                    <select className='form-select' name='state' onChange={updateinput}>
+                                        <option>UP</option>
+                                        <option>Bihar</option>
+                                        <option>Punjab</option>
+                                        <option>Dehli</option>
                                     </select>
                                 </div>
                                 <div className='col-md-6 p-2 mt-2'>
@@ -126,7 +141,8 @@ function Myregistorpage() {
                                 <div className='col-12 p-2 mt-2 text-center'>
                                     <input type='button' value="Registor Now" className='btn btn-success' onClick={registorpage} />
                                     <input type='reset' value="cancel" className='btn btn-danger ms-3' />
-                                    <Link to="/">login page</Link>
+                                    {/* <Link to="/">login page</Link> */}
+                                    <button type="button" className="btn btn-primary" style={{marginLeft:"16px"}}>   <Link to="/" style={{color:"white",textDecoration:"none"}}>login page</Link>  </button>
                                 </div>
                             </div>
                         </div>
@@ -134,6 +150,7 @@ function Myregistorpage() {
                 </div>
             </div>
         </form>
+        </Fragment>
     )
 }
 

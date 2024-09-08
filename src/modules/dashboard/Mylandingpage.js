@@ -3,10 +3,12 @@ import Mynavbar from '../../shares/Mynavbar'
 import Mysidebar from '../../shares/Mysidebar'
 import Myfooter from '../../shares/Myfooter'
 import { Outlet } from 'react-router-dom'
+// import { Carousel } from '../../shares/Carousel'
+
 
 function Mylandingpage() {
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid overflow-hidden'>
         <div className='row fixed-top'>
             <div className='col-12'>
             <Mynavbar/>
@@ -18,6 +20,7 @@ function Mylandingpage() {
             </div>
             <div className='col-md-10 border'>
                 <div className='border page'>
+                {/* <Carousel/> */}
                     <Outlet/>
                 </div>
 
