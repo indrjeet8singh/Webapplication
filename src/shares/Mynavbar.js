@@ -79,40 +79,40 @@ function Mynavbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Application
+                  Dashboard
                 </Link>
                 <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" href="#">
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="#">
-                      modules1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="#">
-                      modules2
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="#">
-                      modules3
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="#">
-                      modules4
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="#">
-                      modules5
-                    </Link>
-                  </li>
-                </ul>
+                 <li>
+                   <Link className="dropdown-item" href="#">
+                    Admin
+                  </Link>
+                </li>
+              <li>
+              <Link className="dropdown-item" to="Myloginpage">
+               Users
+              </Link>
+               </li>
+              //     <li>
+              //       <Link className="dropdown-item" href="#">
+              //         modules2
+              //       </Link>
+              //     </li>
+              //     <li>
+              //       <Link className="dropdown-item" href="#">
+              //         modules3
+              //       </Link>
+              //     </li>
+              //     <li>
+              //       <Link className="dropdown-item" href="#">
+              //         modules4
+              //       </Link>
+              //     </li>
+              //     <li>
+              //       <Link className="dropdown-item" href="#">
+              //         modules5
+              //       </Link>
+              //     </li>
+               </ul>
               </li>
               <li className="nav-item">
                 <Link className="nav-link hlink " to="Aboutpage">
@@ -150,7 +150,7 @@ function Mynavbar() {
                 marginLeft: "20px",
               }}
             >
-              <Link to="Usergetinfo">
+              <Link to="Myloginpage">
                 <VscAccount className="text-success" />
               </Link>
             </span>
