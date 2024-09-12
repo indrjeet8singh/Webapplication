@@ -22,11 +22,9 @@ function Mysidebar() {
           <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><Link to="/dashboard" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Home Page</Link></li>
             <li><Link to="Userloginpage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Login</Link></li>
-            // <li><Link to="Fruitadd" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Fruits Add</Link></li>
             <li><Link to="Users" className="link-body-emphasis d-inline-flex text-decoration-none rounded">All Users</Link></li>
             <li><Link to="Graphanual" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Graphanual</Link></li>
             <li><Link to="Userstatuspage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Userstatuspage</Link></li>
-            // <li><Link to="redux" className="link-body-emphasis d-inline-flex text-decoration-none rounded">redux</Link></li>
             <li><Link to="Mytexteditor" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Myeditor</Link></li>
            <li><Link to="Alluserlist" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Alluserlist</Link></li>
            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Admin</Link></li>
@@ -40,9 +38,9 @@ function Mysidebar() {
         </button>
         <div className="collapse" id="dashboard-collapse">
           <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            // <li><Link to="Adminshoppage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Admin Shop</Link></li>
+    
+            <li><Link to="Adminshoppage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Admin Shop</Link></li>
             <li><Link to="FeedbackList" className="link-body-emphasis d-inline-flex text-decoration-none rounded">FeedbackList</Link></li>
-            // <li><Link to="Logoutpage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Logout</Link></li>
             <li><Link to="/" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</Link></li>
           </ul>
         </div>
