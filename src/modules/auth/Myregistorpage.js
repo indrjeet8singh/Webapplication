@@ -34,7 +34,7 @@ function Myregistorpage() {
 
     const registorpage = async () => {
 
-        if (insdata.fullname.length>=5) {
+        if (insdata.fullname.length>=3) {
 
             const { fullname, email, phone, dob, gender, profile, course, pass } = insdata;
             const mydata = await fetch(`${backendurl}/createdata`, {
