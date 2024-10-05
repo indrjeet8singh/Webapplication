@@ -92,26 +92,6 @@ function Mynavbar() {
                Users
               </Link>
                </li>
-              //     <li>
-              //       <Link className="dropdown-item" href="#">
-              //         modules2
-              //       </Link>
-              //     </li>
-              //     <li>
-              //       <Link className="dropdown-item" href="#">
-              //         modules3
-              //       </Link>
-              //     </li>
-              //     <li>
-              //       <Link className="dropdown-item" href="#">
-              //         modules4
-              //       </Link>
-              //     </li>
-              //     <li>
-              //       <Link className="dropdown-item" href="#">
-              //         modules5
-              //       </Link>
-              //     </li>
                </ul>
               </li>
               <li className="nav-item">
