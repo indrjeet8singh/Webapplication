@@ -9,45 +9,6 @@ import { FaRegUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import '../../assets/Userloginpage.css'; 
 
-// function Myloginpage() {
-//     const usenav = useNavigate();
-
-//     const [userlogin, usersetlogin] = useState({
-//         email: "",
-//         pass: ""
-//     });
-
-//     const updateinput = (e) => {
-//         const { name, value } = e.target;
-//         usersetlogin((prevState) => ({
-//             ...prevState,
-//             [name]: value
-//         }));
-//     };
-
-//     const mylogin = async () => {
-//         const { email, pass } = userlogin;
-//         if (email === "" || pass === "") {
-//             toast.error("Email and password cannot be blank");
-//         } else {
-//             try {
-//                 const response = await fetch(`${backendurl}/mylogin`, {
-//                     method: "POST",
-//                     headers: { "Content-Type": "application/json" },
-//                     body: JSON.stringify({ email, pass })
-//                 });
-//                 const res = await response.json();
-//                 if (res.status === 422) {
-//                     toast.success("Login Successful");
-//                     usenav('/dashboard');
-//                 } else {
-//                     toast.error("Login failed");
-//                 }
-//             } catch (error) {
-//                 toast.error("An error occurred");
-//             }
-//         }
-//     };
 const Myloginpage = () => {
     const navigate = useNavigate();
   
@@ -131,9 +92,7 @@ const Myloginpage = () => {
                     <Link to="/registor" className="btn btn-primary mt-2 ms-3">
                         New Register
                     </Link>
-                    <Link to="/dashboard" className="btn btn-primary mt-2 ms-3">
-                        Dashboard
-                    </Link>
+                    // <Link to="/dashboard" className="btn btn-primary mt-2 ms-3">Dashboard </Link>
                    
                 </div>
             </div>
