@@ -85,14 +85,14 @@ const Myloginpage = () => {
                     <button type="button" className="btn btn-success" onClick={myLogin}>
                         Submit
                     </button>
-                    {/* <button type="reset" className="btn btn-danger ms-3">
-                        Reset
-                    </button> */}
+                     <button type="reset" className="btn btn-danger ms-3">
+                       Reset
+                    </button> 
                     
                     <Link to="/registor" className="btn btn-primary mt-2 ms-3">
                         New Register
                     </Link>
-                    // <Link to="/dashboard" className="btn btn-primary mt-2 ms-3">Dashboard </Link>
+                    
                    
                 </div>
             </div>
