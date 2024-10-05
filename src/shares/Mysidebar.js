@@ -39,7 +39,6 @@ function Mysidebar() {
         <div className="collapse" id="dashboard-collapse">
           <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
     
-            // <li><Link to="Adminshoppage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Admin Shop</Link></li>
             <li><Link to="FeedbackList" className="link-body-emphasis d-inline-flex text-decoration-none rounded">FeedbackList</Link></li>
             <li><Link to="/" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</Link></li>
           </ul>
